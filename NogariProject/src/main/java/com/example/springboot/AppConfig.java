@@ -1,15 +1,15 @@
 package com.example.springboot;
 
-import io.swagger.v3.oas.models.OpenAPI;
-import io.swagger.v3.oas.models.info.Info;
-import io.swagger.v3.oas.models.info.License;
+import com.example.springboot.config.SecurityConfig;
+import com.example.springboot.config.SpringFoxConfig;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Import;
 
 @SpringBootApplication
+@Import({SecurityConfig.class, SpringFoxConfig.class})
 public class AppConfig {
 
 	public static void main(String[] args) {
